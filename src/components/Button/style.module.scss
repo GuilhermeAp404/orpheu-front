@@ -1,0 +1,28 @@
+.button{
+    padding: 10px 50px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-radius: 9999px;
+    color: white;
+    font-weight: bold;
+    background: #3D3D3D;
+    transition: 300ms;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 320px) {
+        font-size: 14px;
+    }
+}
+
+.button:hover{
+    background-color: black;
+    transition: 100ms;
+}
+
+.button:active{
+    background-color: #3D3D3D;
+}

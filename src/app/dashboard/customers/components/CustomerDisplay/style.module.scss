@@ -1,0 +1,18 @@
+.display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #DCDCDC;
+
+    ul{
+        font-family: "Akatab", Arial, Helvetica;
+        list-style: none;
+    }
+
+    .actions{
+        display: flex;
+        gap: 8;
+    }
+
+}

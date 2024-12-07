@@ -1,0 +1,29 @@
+.page{
+    padding: 20px 30px;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}    
+
+
+.page_header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #DCDCDC;
+    margin-bottom: 8px;
+
+    h1{
+        font-size: 34px;
+    }
+
+    @media screen and (max-width: 640px){
+        flex-direction: column;
+        gap: 8;
+
+        h1{
+            font-size: 26px;
+            text-align: center;
+        }
+    }
+}
