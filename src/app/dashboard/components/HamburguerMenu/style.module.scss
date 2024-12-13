@@ -32,7 +32,22 @@
         text-decoration: none;
     }
 
-    li:hover{
+    .logout{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border: none;
+        padding: 10;
+        gap: 8;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Orbitron", sans-serif;
+    }
+
+    li:hover, 
+    .logout:hover{
+        cursor: pointer;
         background-color: #DCDCDC;
     }
 

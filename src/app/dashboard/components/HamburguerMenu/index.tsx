@@ -3,11 +3,22 @@ import React, { useEffect, useState } from 'react'
 import styles from './style.module.scss'
 import { Handshake, HeartHandshake, House, LogOut, Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import { signOut } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
 export default function HamburguerMenu() {
+    const router = useRouter()
     const [open, setOpen] = useState(false)
     const toggleMenu = ()=>{
         setOpen(!open)
+    }
+
+    function logout(){
+        signOut({
+            redirect:false
+        })
+
+        router.replace('/')
     }
 
     useEffect(()=>{
@@ -44,9 +55,9 @@ export default function HamburguerMenu() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/">
+                        <button className={styles.logout} onClick={logout}>
                             <LogOut /> Sair
-                        </Link>
+                        </button>
                     </li>
                 </ul>
             </nav>

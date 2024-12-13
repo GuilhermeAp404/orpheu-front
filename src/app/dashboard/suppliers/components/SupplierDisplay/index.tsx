@@ -2,15 +2,15 @@ import { MapPin, Pencil, Trash } from 'lucide-react'
 import styles from './style.module.scss'
 import React from 'react'
 
-export default function SupplierDisplay() {
+export default function SupplierDisplay(supplier:SupplierProps) {
     return (
         <article className={styles.display}>
             <div>
-                <h2>Nome do fornecedor</h2>
+                <h2>{supplier.name}</h2>
                 <ul>
-                    <li><strong>Tel: </strong>(11) 99999-9999</li>
-                    <li><strong>CNPJ: </strong>48.614.315/0001-55</li>
-                    <li><MapPin  size={18}/> R. Pedrinhas de Brilhante 80</li>
+                    <li><strong>Tel: </strong>{supplier.phone}</li>
+                    <li><strong>CNPJ: </strong>{supplier.register}</li>
+                    <li><MapPin  size={18}/>{supplier.address}</li>
                 </ul>
             </div>
             <div className={styles.actions}>
